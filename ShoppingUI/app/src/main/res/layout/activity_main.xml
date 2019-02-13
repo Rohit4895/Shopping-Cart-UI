@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/collectionText"
+        android:layout_width="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Collections"
+        android:textColor="@color/mainText"
+        android:textSize="30dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"/>
+    <ImageView
+        android:id="@+id/cartIcon"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@id/collectionText"
+        android:layout_width="30dp"
+        android:background="@drawable/cart"
+        android:layout_height="25dp" />
+    <TextView
+        android:id="@+id/notification"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/cartIcon"
+        android:layout_width="20dp"
+        android:layout_marginLeft="-10dp"
+        android:text="0"
+        android:textColor="@color/cardView"
+        android:background="@drawable/textview_counter"
+        android:layout_height="20dp"
+        android:textAlignment="center"
+        android:gravity="top|right|end"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/horiRecyclerView"
+        android:layout_below="@+id/collectionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"></android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/verRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horiRecyclerView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>
