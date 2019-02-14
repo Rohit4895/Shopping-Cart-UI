@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainRelative">
+
     <TextView
         android:id="@+id/collectionText"
-        android:layout_width="200dp"
+        android:layout_width="@dimen/collectionWidth"
+        android:layout_height="@dimen/collectionHeight"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:layout_marginTop="@dimen/collectionMTp"
+        android:background="@color/mainRelative"
         android:text="Collections"
         android:textColor="@color/mainText"
-        android:textSize="30dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="20dp"/>
+        android:textSize="@dimen/collectionTextSize" />
+
     <ImageView
         android:id="@+id/cartIcon"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="35dp"
-        android:layout_toRightOf="@id/collectionText"
-        android:layout_width="30dp"
-        android:background="@drawable/cart"
-        android:layout_height="25dp" />
+        android:layout_width="@dimen/cartIconWidth"
+        android:layout_height="@dimen/cartIconHeight"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/cartIconMTp"
+        android:layout_marginRight="@dimen/cartIconMRt"
+        android:background="@drawable/cart" />
+
     <TextView
         android:id="@+id/notification"
-        android:layout_marginTop="7dp"
-        android:layout_toRightOf="@id/cartIcon"
-        android:layout_width="20dp"
-        android:layout_marginLeft="-10dp"
-        android:text="0"
-        android:textColor="@color/cardView"
+        android:layout_width="@dimen/notificationWidth"
+        android:layout_height="@dimen/notificationHeight"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/notificationMLt"
+        android:layout_marginTop="@dimen/notificationMTp"
+        android:layout_marginRight="@dimen/notificationMRt"
         android:background="@drawable/textview_counter"
-        android:layout_height="20dp"
+        android:gravity="top|right|end"
+        android:text="0"
         android:textAlignment="center"
-        android:gravity="top|right|end"/>
+        android:textColor="@color/cardView" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/horiRecyclerView"
-        android:layout_below="@+id/collectionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_below="@+id/collectionText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"></android.support.v7.widget.RecyclerView>
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/verRecyclerView"

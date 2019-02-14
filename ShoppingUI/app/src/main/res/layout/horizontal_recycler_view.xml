@@ -3,19 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="20dp"
+    android:layout_marginLeft="@dimen/leftMargin"
     android:background="@color/mainRelative">
 
         <Button
             android:id="@+id/horiButton"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="0.5dp"
-           android:padding="5dp"
-            android:textSize="10dp"
+            android:layout_marginTop="@dimen/horiButtonMTp"
+            android:layout_marginBottom="@dimen/horiButtonMBtm"
+            android:layout_marginRight="@dimen/horiButtonMRt"
+           android:padding="@dimen/horiButtonPadding"
+            android:textSize="@dimen/horiButtonTSize"
             android:textColor="@color/blueButton"
             android:background="@drawable/hori_cart_button"
             android:layout_width="wrap_content"
-            android:layout_height="40dp" />
+            android:layout_height="@dimen/horiButtonHeight" />
 
 </RelativeLayout>
